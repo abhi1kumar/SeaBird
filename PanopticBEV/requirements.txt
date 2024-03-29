@@ -1,0 +1,18 @@
+tensorboardX~=2.1
+setuptools~=68.0.0
+opencv-python~=4.5.1.48
+umsgpack~=0.1.0
+numpy~=1.21
+Pillow~=9.0.0
+configparser~=5.0.1
+kornia~=0.2.0
+matplotlib==3.5.3
+pandas==1.3.5
+shapely==2.0.1
+scipy==1.7.3
+seaborn==0.12.2
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch==1.11.0+cu113
+torchvision==0.12.0+cu113
+torchaudio==0.11.0
+inplace-abn==1.0.12

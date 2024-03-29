@@ -1,0 +1,22 @@
+#!/bin/bash --login
+########## SBATCH Lines for Resource Request ##########
+#SBATCH --time=144:00:00              # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH --nodes=2                   # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH --ntasks=8                  # same as total gpus 
+#SBATCH --ntasks-per-node=4     	# min(8, ntasks)
+#SBATCH --gpus-per-node=a100:4    	# total gpus = gpus-per-node * nodes
+#SBATCH --cpus-per-task=4           # number of CPUs (or cores) per task (same as -c)
+#SBATCH --mem-per-cpu=16G
+#SBATCH --job-name run_19          # you can give your job a name for easier identification (same as -J)
+#SBATCH -o ./slurm_log/%j.log
+########## Command Lines to Run ##########
+module load GCC/9.1.0-2.32
+conda init bash
+
+cd /mnt/home/kumarab6/project/HoP ### change to the directory where your code is located
+conda activate hop2 ### Activate virtual environment
+
+srun /mnt/home/kumarab6/anaconda3/envs/hop2/bin/python -u tools/train.py configs/hop_bevdet/run_19.py --work-dir=work_dirs/run_19 --seed 1 --launcher=slurm
+
+scontrol show job $SLURM_JOB_ID ### write job information to output file
+
