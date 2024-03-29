@@ -2,7 +2,7 @@
 
 # [SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects]
 
-### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA)|
+### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA) | [nuScenes Demo] | [Project](http://cvlab.cse.msu.edu/project-seabird.html) | [Talk] | [Slides] | [Poster]
 
 [Abhinav Kumar](https://sites.google.com/view/abhinavkumar)<sup>1</sup>, 
 [Yuliang Guo](https://yuliangguo.github.io)<sup>2</sup>, 
