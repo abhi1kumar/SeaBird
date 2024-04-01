@@ -21,7 +21,7 @@ in [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024/)
 
 Much of the codebase is based on [PanopticBEV](https://github.com/robot-learning-freiburg/PanopticBEV). Some implementations are from [BBAVectors](https://github.com/yijingru/BBAVectors-Oriented-Object-Detection) and our [DEVIANT](https://github.com/abhi1kumar/DEVIANT.git).
 
-[![arXiv](http://img.shields.io/badge/arXiv-2207.10758-B31B1B.svg)](https://arxiv.org/abs/2207.10758)
+[![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
