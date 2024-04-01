@@ -19,7 +19,7 @@ in [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024/)
 
 <img src="PanopticBEV/images/seabird_kitti360_demo.gif" width="784">
 
-[![arXiv](http://img.shields.io/badge/arXiv-2207.10758-B31B1B.svg)](https://arxiv.org/abs/2207.10758)
+[![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
