@@ -1,5 +1,4 @@
-# SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects
-
+# [SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects](https://arxiv.org/pdf/2403.20318.pdf)
 
 [Abhinav Kumar](https://sites.google.com/view/abhinavkumar)<sup>1</sup>, 
 [Yuliang Guo](https://yuliangguo.github.io)<sup>2</sup>, 
