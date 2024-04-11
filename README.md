@@ -4,6 +4,10 @@
 
 ### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA) | [nuScenes Demo] | [Project](http://cvlab.cse.msu.edu/project-seabird.html) | [Talk] | [Slides] | [Poster]
 
+[![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/abhi1kumar/SeaBird?style=social)](https://github.com/abhi1kumar/SeaBird)
+
 [Abhinav Kumar](https://sites.google.com/view/abhinavkumar)<sup>1</sup>, 
 [Yuliang Guo](https://yuliangguo.github.io)<sup>2</sup>, 
 [Xinyu Huang](https://scholar.google.com/citations?user=cL4bNBwAAAAJ&hl=en)<sup>2</sup>, 
@@ -19,8 +23,7 @@ in [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024/)
 
 <img src="PanopticBEV/images/seabird_kitti360_demo.gif" width="784">
 
-[![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 
 ## Citation
