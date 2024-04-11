@@ -6,6 +6,7 @@
 
 [![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=abhi1kumar%2FSeaBird&labelColor=%23FFFFFF&countColor=%23721e82&style=flat)](https://visitorbadge.io/status?path=abhi1kumar%2FSeaBird)
 [![GitHub Stars](https://img.shields.io/github/stars/abhi1kumar/SeaBird?style=social)](https://github.com/abhi1kumar/SeaBird)
 
 [Abhinav Kumar](https://sites.google.com/view/abhinavkumar)<sup>1</sup>, 
