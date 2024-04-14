@@ -10,6 +10,7 @@ Please answer the following questions to help us fix (y)our issues.
 
 ## Checklist
 
+- [ ] I have starred the repo.
 - [ ] I have searched issues section but cannot get the expected help.
 - [ ] The bug is not fixed yet.
 
