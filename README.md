@@ -4,6 +4,9 @@
 
 ### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA) | [nuScenes Demo] | [Project](http://cvlab.cse.msu.edu/project-seabird.html) | [Talk] | [Slides] | [Poster]
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/seabird-segmentation-in-bird-s-view-with-dice/3d-object-detection-from-monocular-images-on-7)](https://paperswithcode.com/sota/3d-object-detection-from-monocular-images-on-7?p=seabird-segmentation-in-bird-s-view-with-dice) 	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/seabird-segmentation-in-bird-s-view-with-dice/3d-object-detection-on-nuscenes-camera-only)](https://paperswithcode.com/sota/3d-object-detection-on-nuscenes-camera-only?p=seabird-segmentation-in-bird-s-view-with-dice)
+
 [![arXiv](http://img.shields.io/badge/arXiv-2403.20318-B31B1B.svg)](https://arxiv.org/abs/2403.20318)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=abhi1kumar%2FSeaBird&labelColor=%23FFFFFF&countColor=%23721e82&style=flat)](https://visitorbadge.io/status?path=abhi1kumar%2FSeaBird)
