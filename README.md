@@ -4,7 +4,7 @@
 
 # SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects
 
-### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA) | [nuScenes Demo] | [Project](http://cvlab.cse.msu.edu/project-seabird.html) | [Talk] | [Slides] | [Poster]
+### [KITTI-360 Demo](https://www.youtube.com/watch?v=SmuRbMbsnZA) | [nuScenes Demo] | [Project](http://cvlab.cse.msu.edu/project-seabird.html) | [Talk](https://www.youtube.com/watch?v=-6CxDymLZ38) | [Slides](https://docs.google.com/presentation/d/15OqUDMIo8vf96vByifpv2npq3aq4xmS38HwjT1wt31U/) | [Poster](https://docs.google.com/presentation/d/15XmI7EAMUzj__5b_Pvdo1c0LTSlqBnONWy3upgfxWfM/)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/seabird-segmentation-in-bird-s-view-with-dice/3d-object-detection-from-monocular-images-on-7)](https://paperswithcode.com/sota/3d-object-detection-from-monocular-images-on-7?p=seabird-segmentation-in-bird-s-view-with-dice) 	
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/seabird-segmentation-in-bird-s-view-with-dice/3d-object-detection-on-nuscenes-camera-only)](https://paperswithcode.com/sota/3d-object-detection-on-nuscenes-camera-only?p=seabird-segmentation-in-bird-s-view-with-dice)
