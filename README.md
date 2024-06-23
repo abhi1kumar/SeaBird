@@ -28,7 +28,7 @@
 
 in [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024/)
    <p align="center">
-      <img src="PanopticBEV/images/Seabird_pipeline.png" width="1024">
+      <img src="Seabird_teasor.gif" width="784">
    </p>
 </div>
 
