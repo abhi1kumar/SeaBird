@@ -56,9 +56,41 @@ If you find our work useful in your research, please consider starring the repo 
 
 See [PanopticBEV](PanopticBEV)
 
+#### Model Zoo
+
+We provide logs/models/predictions for the main experiments on KITTI-360 Val /KITTI-360 Test data splits available to download here.
+
+| Data_Splits | Method  | Config<br/>(Run)                                          | Weight<br>/Pred  | Metrics | Lrg<br/>(50) | Car<br/>(50) | Mean<br/>(50) | Lrg<br/>(25) | Car<br/>(25) | Mean<br/>(25) | Lrg<br/>Seg | Car<br/>Seg | Mean<br/>Seg | 
+|------------|---------|------------------------------------------------------------------|----------|--------|----------|-----------|----------|-----------|----------------|----|--------------|-----------|-----------|
+| KITTI-360 Val  | Stage 1 | [seabird_val_stage1](experiments/pbev_seabird_kitti360_val_stage1.ini) | [gdrive](https://drive.google.com/file/d/17z02Tj92rQtYYVtiUd2O0grkmQ_ZGgdV/view?usp=sharing) | IoU  |   -   |   -   |   -   |   -   |   -   |   -   | 23.83 | 48.54 | 36.18 
+| KITTI-360 Val  | PBEV+SeaBird | [seabird_val](experiments/pbev_seabird_kitti360_val.ini)          | [gdrive](https://drive.google.com/file/d/1iam4F50jX6Hf0WfvkIzkHRkNw_rq3U_p/view?usp=sharing) | AP   | 13.22 | 42.46 | 27.84 | 37.15 | 52.53 | 44.84 | 24.30 | 48.04 | 36.17
+| KITTI-360 Test | PBEV+SeaBird | [seabird_test](experiments/pbev_seabird_kitti360_test.ini)        | [gdrive](https://drive.google.com/file/d/1YC3cWVOmX7bdoU21URnP24KlZLOF4q-D/view?usp=sharing) | AP   |   -   |   -   | 4.64  |   -   |   -   | 37.12 |   -   |   -   |   -   
+
+
 ## Multi-Camera (nuScenes) Models
 
 See [HoP](HoP)
+
+#### Model Zoo
+
+**nuScenes Val Results**
+
+|          Model           | Resolution | Backbone     | Pretrain | APLrg |  mAP   |  NDS   |                      Ckpt/Log/Pred                       |
+| :----------------------: | :--------: | :----------: | :------: | :---: | :----: | :----: | :------------------------------------------------------: |
+| [HoP_BEVDet4D_256](configs/hop_bevdet/hop_bevdet4d-r50-depth.py)    | 256x704  |  ResNet50   | ImageNet-1K | 0.274 | 0.399 | 0.509 | [ckpt](https://github.com/Sense-X/HoP/releases/download/Release/HoP_BEVDet_ep24_ema.pth) / [log](https://github.com/Sense-X/HoP/releases/download/Release/HoP_BEVDet.log) |
+| [HoP+SeaBird_256 Stage1](configs/hop_bevdet/hop_seabird_r50_256x704_stage1.py)    | 256x704  |  ResNet50   | ImageNet-1K | - | - | -| [gdrive](https://drive.google.com/file/d/1zQOO2A4Twno6C1nC53RCoazDVuZ_9W0e/view?usp=sharing) | 
+| [HoP+SeaBird_256](configs/hop_bevdet/hop_seabird_r50_256x704.py)    | 256x704  |  ResNet50   | ImageNet-1K | 0.282 | 0.411 | 0.515 | [gdrive](https://drive.google.com/file/d/1dmVQW8yDE423mm6AKBM2o1_3F3V59dXQ/view?usp=sharing) |   
+| [HoP+SeaBird_512 Stage1](configs/hop_bevdet/hop_seabird_r101_512x1408_stage1.py)   | 512x1408 |  ResNet101   | ImageNet-1K | - | - | - | [gdrive](https://drive.google.com/file/d/1D44imXsFSYg9WE-kdnE-SH-G_gjXvxlw/view?usp=sharing) |
+| [HoP+SeaBird_512](configs/hop_bevdet/hop_seabird_r101_512x1408.py)   | 512x1408 |  ResNet101   | ImageNet-1K | 0.329 | 0.462 | 0.547 | [gdrive](https://drive.google.com/file/d/1pgMzLGjXh5A_P3XR7CmQju5qXenTAXAJ/view?usp=sharing) |
+| [HoP+SeaBird_640 Stage1](configs/hop_bevdet/hop_seabird_vov99_640x1600_stage1.py)   | 640x1600 |  V2-99   | DDAD15M | - | - | - | [gdrive](https://drive.google.com/file/d/1cbVkituogo_e5ILMrC8Z8NdemrfQL2uV/view?usp=sharing) |
+| [HoP+SeaBird_640](configs/hop_bevdet/hop_seabird_vov99_640x1600.py)   | 640x1600 |  V2-99   | DDAD15M | 0.403 | 0.527 | 0.602 | [gdrive](https://drive.google.com/file/d/1dz1w0DQrjgw1xm6u6Kp4csNThYkYPFhu/view?usp=sharing) |
+
+**nuScenes Test Results**
+
+|          Model           | Resolution | Backbone     | Pretrain | APLrg |  mAP   |  NDS   |                      Ckpt/Log/Pred                       |
+| :----------------------: | :--------: | :----------: | :------: | :---: | :----: | :----: | :------------------------------------------------------: |
+| [HoP+SeaBird_512 Test](configs/hop_bevdet/hop_seabird_r101_512x1408_test.py)   | 512x1408 |  ResNet101   | ImageNet-1K | 0.366 | 0.486 | 0.570 | [gdrive](https://drive.google.com/file/d/1Y39kVTdw0OXN45u6UedgXfYhePFZ-0Xt/view?usp=sharing) |
+| [HoP+SeaBird_640 Val](configs/hop_bevdet/hop_seabird_vov99_640x1600.py)   | 640x1600 |  V2-99   | DDAD15M | 0.384 | 0.511 | 0.597 | [gdrive](https://drive.google.com/file/d/1dz1w0DQrjgw1xm6u6Kp4csNThYkYPFhu/view?usp=sharing) |
 
 ## Acknowledgements
 We thank the authors of the following awesome codebases:
