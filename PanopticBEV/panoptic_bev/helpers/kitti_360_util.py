@@ -266,11 +266,13 @@ def convert_kitti_image_text_to_kitti_360_window_npy(result_folder, output_folde
     evaluate_classes     = ['Car', 'Building']
 
     if split == "testing":
-        mapping_file      = "data/kitti_360/kitti_360/test_det_org.txt"
+        mapping_file      = "data/kitti_360/ImageSets/org_test_det_samp.txt"
+        key_list_path     = "data/kitti_360/ImageSets/test_det.txt"
         calib_folder      = "data/kitti_360/testing/calib/"
         window_list_path  = "data/kitti_360/ImageSets/windows/2013_05_18_drive_test.txt"
     else:
-        mapping_file      = "data/kitti_360/kitti_360/val_det_org.txt"
+        mapping_file      = "data/kitti_360/ImageSets/org_val_det_samp.txt"
+        key_list_path     = "data/kitti_360/ImageSets/val_det_samp.txt"
         calib_folder      = "data/kitti_360/train_val/calib/"
         window_list_path  = "data/kitti_360/ImageSets/windows/2013_05_28_drive_val.txt"
 
@@ -291,6 +293,11 @@ def convert_kitti_image_text_to_kitti_360_window_npy(result_folder, output_folde
         windows.append([drive_id, start, end])
     num_windows    = len(windows)
     data_to_write  = [None] * num_windows
+
+    # Read frame_mappings and key_list. The lines corresponding in these two files
+    # refer to the original KITTI-360 path and the numeric image indices
+    frame_mappings = read_lines(mapping_file)
+    key_list = read_lines(key_list_path)
 
     # Then get the image prediction paths
     pred_file_list = sorted(glob.glob(result_folder + "/*.txt"))
@@ -388,12 +395,16 @@ def convert_kitti_image_text_to_kitti_360_window_npy(result_folder, output_folde
             # center_x, center_y, center_z, length, width, height,  clockwise    , id, confidence
             image_data = np.hstack((global_pts, l3d[:, np.newaxis], w3d[:, np.newaxis], h3d[:, np.newaxis], heading_angle[:, np.newaxis], class_id[:, np.newaxis], score[:, np.newaxis]))
 
-            # Check out the drive id of the file if it is in the window
-            real_path  = os.path.realpath(calib_file_path)
-            frame_id   = int(os.path.basename(real_path).split(".")[0])
-            drive_str  = [s for i, s in enumerate(real_path.split("/")) if "drive" in s][0]
-            drive_id   = int(drive_str.split("_")[4])
+            # Extract drive_str, and drive_id
+            key = os.path.basename(pred_file_path).replace(".txt", "")  # 068634
+            index = key_list.index(key)  # 0
+            real_path = frame_mappings[index]  # 2013_05_28_drive_0000_sync;0000000372
 
+            drive_str, frame_id = real_path.split(";")
+            drive_id = int(drive_str.split("_")[4])  # 0000
+            frame_id = int(frame_id)  # 372
+
+            # Check out the drive id of the file if it is in the window
             for w, (window_data, window) in enumerate(zip(data_to_write, windows)):
                 window_drive_id, window_start, window_end = window
                 if drive_id == window_drive_id and window_start <= frame_id and frame_id <= window_end:
