@@ -26,18 +26,18 @@ def read_image(path, sixteen_bit= False, rgb= False):
 def write_image(path, im):
     cv2.imwrite(path, im)
 
-def read_csv(path, delimiter= " ", ignore_warnings= False, use_pandas= False):
+def read_csv(path, delimiter= " ", ignore_warnings= False, use_pandas= False, skip_rows= 0):
     try:
         if ignore_warnings:
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")
                 if use_pandas:
-                    data = pd.read_csv(path, delimiter= delimiter, header=None).values
+                    data = pd.read_csv(path, delimiter= delimiter, header=None, skiprows= skip_rows).values
                 else:
                     data = np.genfromtxt(path, delimiter= delimiter)
         else:
             if use_pandas:
-                data = pd.read_csv(path, delimiter=delimiter, header=None).values
+                data = pd.read_csv(path, delimiter=delimiter, header=None, skiprows= skip_rows).values
             else:
                 data = np.genfromtxt(path, delimiter=delimiter)
     except:
