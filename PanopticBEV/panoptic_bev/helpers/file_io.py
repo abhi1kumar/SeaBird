@@ -82,11 +82,12 @@ def save_numpy(path, numpy_variable, save_folder= None, show_message= True):
         logging.info("=> Saving to {}".format(path))
     np.save(path, numpy_variable)
 
-def read_pickle(path):
+def read_pickle(path, show_message= True):
     """
     De-serialize an object from a provided path
     """
-    print("=> Loading pickle {}".format(path))
+    if show_message:
+        print("=> Loading pickle {}".format(path))
     with open(path, 'rb') as file:
         return pickle.load(file)
 
@@ -98,8 +99,9 @@ def write_pickle(path, obj):
     with open(path, 'wb') as file:
         pickle.dump(obj, file)
 
-def read_json(path):
-    print("=> Loading JSON {}".format(path))
+def read_json(path, show_message= True):
+    if show_message:
+        print("=> Loading JSON {}".format(path))
     with open(path, 'rb') as file:
         return json.load(file)
 
