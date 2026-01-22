@@ -15,9 +15,11 @@ import io
 import yaml
 import umsgpack
 
-def read_image(path, sixteen_bit= False, rgb= False):
+def read_image(path, sixteen_bit= False, rgb= False, grayscale= False):
     if sixteen_bit:
         return cv2.imread(path, -1)
+    elif grayscale:
+        return cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     else:
         if rgb:
             return cv2.cvtColor(cv2.imread(path), cv2.COLOR_BGR2RGB)
@@ -112,7 +114,7 @@ def write_json(path, dict_name, sort_keys= False):
             f.write(json.dumps(dict_name, default=lambda o: o.__dict__, sort_keys= True, indent= 4))
     else:
         with open(path, 'w') as f:
-            f.write(json.dumps(dict_name, default=lambda o: o.__dict__))
+            f.write(json.dumps(dict_name, default=lambda o: o.__dict__, indent= 4))
 
 def read_yaml(path):
     print("=> Loading YAML {}".format(path))
