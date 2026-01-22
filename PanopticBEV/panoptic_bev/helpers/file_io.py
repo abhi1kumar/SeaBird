@@ -112,7 +112,7 @@ def write_json(path, dict_name, sort_keys= False):
             f.write(json.dumps(dict_name, default=lambda o: o.__dict__, sort_keys= True, indent= 4))
     else:
         with open(path, 'w') as f:
-            f.write(json.dumps(dict_name, default=lambda o: o.__dict__, indent= 4))
+            f.write(json.dumps(dict_name, default=lambda o: o.__dict__))
 
 def read_yaml(path):
     print("=> Loading YAML {}".format(path))
